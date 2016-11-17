@@ -1,0 +1,64 @@
+@media (max-width:835px) {
+    .logo {
+        width: 200px;
+    }
+    nav {
+        display: none;
+    }
+    .burger-menu {
+        display: inline-block;
+    }
+    .mobile-nav {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        float: none;
+        width: 100%;
+        clear: both;
+        text-align: center;
+        li {
+            display: block;
+            margin-right: 0;
+            a {
+                padding-top: 40px;
+                padding-bottom: 10px;
+                text-transform: uppercase;
+                @include font-size(24px);
+                display: block;
+                color: #fff;
+                @include transition(.3s linear color);
+                &:hover {
+                    color: $theme-red;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px) {
+    .circle {
+        margin-bottom: 40px;
+    }
+    footer {
+        .footer-social-link {
+            margin-left: 10px;
+            margin-right: 10px;
+            @include font-size(15px);
+        }
+        .footer-copyright {
+            @include font-size(14px);
+        }
+    }
+}
+@media (max-width: 1143px) {
+    .top-split__caption, .bottom-split__caption {
+        @include font-size(44px);
+    }
+}
+@media (max-width:836px) {
+    .top-split__caption,
+    .bottom-split__caption {
+        font-size: 7vw;
+    }
+}

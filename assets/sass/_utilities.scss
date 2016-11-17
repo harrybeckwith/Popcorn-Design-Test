@@ -1,0 +1,60 @@
+// ==========================================================================
+// Utilities
+// ==========================================================================
+// Mixins
+//- clearfix
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+//- trans form and translate vendors
+@mixin transform($transforms) {
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin translate ($x, $y) {
+    @include transform(translate($x, $y));
+}
+
+//- transition vendors
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+//- px to rem
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+
+/* usage 
+
+p {
+  @include font-size(14px)
+}
+
+*/
+
+// Colors 
+$theme-red: #ec2100;
+$paragraph: #1d1d1b;
+$twitter: #00aced;
+$facebook: #3b5998;
+$instagram: #bc2a8d;
