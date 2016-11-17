@@ -636,13 +636,13 @@ nav ul ul.sub-menu li a {
 }
 
 .top-split {
-  background: url("../img/top-split.jpg");
+  background: url("/img/top-split.jpg");
   height: 70vh;
   z-index: 2;
 }
 
 .bottom-split {
-  background: url("../img/bottom-split.jpg");
+  background: url("/img/bottom-split.jpg");
   height: 30vh;
   overflow: hidden;
 }
